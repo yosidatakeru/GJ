@@ -12,6 +12,7 @@ public:
 
 	void Update();
 
+
 	void Draw(ViewProjection& viewProjection);
 
 	bool CheckStage(float x, float y);
