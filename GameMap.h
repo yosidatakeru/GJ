@@ -4,6 +4,7 @@
 #include "MathUtilityForText.h"
 #include "Model.h"
 #include "WorldTransform.h"
+#include <Sprite.h>
 
 class GameMap {
 
@@ -14,6 +15,8 @@ public:
 
 
 	void Draw(ViewProjection& viewProjection);
+
+	void Draw2D();
 
 	bool CheckStage(float x, float y);
 
@@ -44,6 +47,12 @@ private:
 	uint32_t textureHandleMapB_ = 0;
 	uint32_t textureHandleMapC_ = 0;
 	Model* modelMap_ = nullptr;
+
+	//背景
+	uint32_t textureHandleBackground_ = 0;
+	Sprite* spriteBackground_;
+
+	
 
 	int mapData[mapX][mapY] = {
 	    {2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2},

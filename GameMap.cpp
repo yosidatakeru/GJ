@@ -17,6 +17,12 @@ void GameMap::Initialize(Model* model, uint32_t textureHandle) {
 
 	textureHandleMapC_ = TextureManager::Load("LuckyBlock.png");
 
+	//背景
+	textureHandleBackground_ = TextureManager::Load("back.png");
+
+	spriteBackground_ = Sprite::Create(textureHandleBackground_, {0, 0});
+
+
 
 	for (int y = 0; y < mapY; y++) {
 		for (int x = 0; x < mapX; x++) {
@@ -72,6 +78,8 @@ void GameMap::Draw(ViewProjection& viewProjection) {
 		}
 	}
 }
+//背景
+void GameMap::Draw2D() { spriteBackground_->Draw(); }
 
 bool GameMap::CheckStage(float px, float py) {
 	for (int y = 0; y < mapY; y++) {

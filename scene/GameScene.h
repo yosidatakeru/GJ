@@ -28,6 +28,7 @@ public: // メンバ関数
 	/// </summary>
 	~GameScene();
 
+
 	/// <summary>
 	/// 初期化
 	/// </summary>
@@ -58,7 +59,10 @@ private: // メンバ変数
 	/// </summary>
 	/// 
 	
-	
+	void GamePlayUpdate();
+	void TitleUpdate();
+	void TutorialUpdate();
+	void ScoreUpdate();
 
 	//プレイヤー
 	uint32_t textureHandlePlayer_ = 0;
@@ -89,4 +93,13 @@ private: // メンバ変数
 	uint32_t textureHandleScore_ = 0;
 	Sprite* spriteScore_ = nullptr;
 
+
+	int GameScene_ = 0;
+	int sceneMode_ = 0;
+
+	uint32_t textureHandleTitle_ = 0;
+	Sprite* spriteTitle_;
+
+	uint32_t textureHandleTutorial_ = 0;
+	Sprite* spriteTutorial_;
 };
